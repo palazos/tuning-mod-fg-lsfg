@@ -1,0 +1,14 @@
+{
+  "moduleId": "fg-lsfg",
+  "version": "0.1.0",
+  "minProductVersion": 23,
+  "displayName": "LSFG Frame Generation",
+  "description": "Lossless Scaling frame generation for Winlator Tuning.",
+  "engineSlot": "frameGen",
+  "requires": [],
+  "conflicts": ["fg-wfg", "fg-tuning"],
+  "provides": ["frame-gen-lsfg"],
+  "uiContributions": [],
+  "dex": [],
+  "nativeLibs": ["libfg_lsfg.so", "liblsfg_dxbc.so"]
+}
