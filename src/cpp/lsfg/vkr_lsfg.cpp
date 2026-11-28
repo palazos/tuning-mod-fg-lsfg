@@ -115,6 +115,10 @@ static float lsfg_effective_flow_scale(const VkrLsfg* lsfg, uint32_t width) {
                       LSFG_FLOW_SCALE_MAX);
 }
 
+bool vkr_lsfg_bind_dispatch(PFN_vkGetInstanceProcAddr gipa, VkInstance instance) {
+    return vkd_init_from_gipa(gipa) && vkd_load_instance(instance);
+}
+
 VkrLsfg* vkr_lsfg_create(VkDevice device, VkPhysicalDevice physical_device,
                          const char* cache_path, bool allow_fp16) {
     if (device == VK_NULL_HANDLE || physical_device == VK_NULL_HANDLE || cache_path == nullptr) {
